@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeploymentSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Destinations>
+    <DeploymentDestinationSettings>
+      <Path>D:\documents\projects\C++\dev\SpaceBattles\Debug</Path>
+      <AutoDeployUntil>9999-12-31T23:59:59.9999999</AutoDeployUntil>
+    </DeploymentDestinationSettings>
+  </Destinations>
+  <AuthenticationPasswordValue>
+    <Value />
+  </AuthenticationPasswordValue>
+  <DeployOnBuild>false</DeployOnBuild>
+  <DeployDependencies>true</DeployDependencies>
+  <DeploySatellites>true</DeploySatellites>
+  <DeployAllOther>true</DeployAllOther>
+  <DeployConfig>true</DeployConfig>
+  <DeployCrt>true</DeployCrt>
+  <DeploySubfolders>false</DeploySubfolders>
+  <BackUpDestinationFiles>true</BackUpDestinationFiles>
+  <CreateTargetFolder>true</CreateTargetFolder>
+</DeploymentSettings>
