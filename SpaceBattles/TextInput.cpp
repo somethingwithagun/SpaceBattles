@@ -65,7 +65,12 @@ void TextInput::update(double deltaT)
 		break;
 	}
 
-
+	if (m_text.getSize() > 0 && !m_active && m_text[m_text.getSize() - 1] == '_') {
+		m_text.erase(m_text.getSize() - 1, 1);
+		this->setText(m_text);
+	}
+	else if (m_text.getSize() > 0 && m_active && m_text[m_text.getSize() - 1] != '_')
+		this->setText(m_text);
 
 	if (m_counter > 0.06)
 	{
@@ -160,7 +165,8 @@ void TextInput::setText(const sf::String& text)
 		return;
 	}
 
-	m_text = text;
+	if (m_active)
+		m_text = text + '_';
 
 	m_label.setString(m_text);
 }
@@ -190,8 +196,14 @@ const int TextInput::getCharacterSize() const
 	return m_label.getCharacterSize();
 }
 
-const sf::String& TextInput::getText() const
+const sf::String TextInput::getText() const
 {
+	if (m_text.getSize() > 0 && m_active && m_text[m_text.getSize() - 1] == '_') {
+		sf::String text = m_text;
+		text.erase(text.getSize() - 1, 1);
+		return text;
+	}
+
 	return m_text;
 }
 

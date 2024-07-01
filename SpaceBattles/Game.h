@@ -6,6 +6,7 @@
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio/Music.hpp>
 
 #include "player.h"
 #include "states/GameState.h"
@@ -57,6 +58,8 @@ public:
 	//void setState(State state);
 
 private:
+	sf::Music m_music;
+
 	const sf::View* m_default_view = nullptr;
 
 	sf::Clock m_dt_clock;

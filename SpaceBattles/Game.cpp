@@ -12,6 +12,9 @@ Game::Game(const sf::Vector2f& window_size, const int fps)
 
 	m_window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
+	if (!m_music.openFromFile("music/main.ogg"))
+		std::cerr << "ERROR while opening musics file" << std::endl;
+	else m_music.play();
 
 	m_default_view = &m_window->getDefaultView();
 

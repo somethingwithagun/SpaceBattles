@@ -10,6 +10,7 @@
 #include "../InfoDialog.h"
 #include "LobbyState.h"
 
+#include <thread>
 #include <SFML/Network.hpp>
 #include <thread>
 #include <iostream>
@@ -47,6 +48,7 @@ public:
 
 	void acceptSocket();
 
+
 	void init() override;
 
 private:
@@ -60,6 +62,8 @@ private:
 
 	// variables
 	std::future<void> acceptToSocket;
+	std::future<void> sendDataAsync;
+	std::future<void> recvDataAsync;
 
 	sf::TcpListener* listener = nullptr;
 	sf::TcpSocket* m_socket = nullptr;
@@ -95,6 +99,7 @@ private:
 	std::vector<Player*> m_opposite_players;
 
 	std::map <Player*, sf::TcpSocket*> m_sockets;
+	sf::SocketSelector m_sockselector;
 
 	sf::Font* m_font = nullptr;
 

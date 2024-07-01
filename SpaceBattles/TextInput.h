@@ -59,7 +59,7 @@ public:
 
 	const int getCharacterSize() const;
 
-	const sf::String& getText() const;
+	const sf::String getText() const;
 
 	const sf::String& getPlaceholderText() const;
 

@@ -110,7 +110,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\libs\SFML-2.5.1\lib;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;sfml-audio-d.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,6 +145,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Meteor.cpp" />
     <ClCompile Include="MovementComponent.cpp" />
+    <ClCompile Include="Online.cpp" />
+    <ClCompile Include="OnlineHost.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="RangedWeapon.cpp" />
     <ClCompile Include="DialogBase.cpp" />
@@ -167,6 +169,8 @@
     <ClInclude Include="Item.h" />
     <ClInclude Include="Meteor.h" />
     <ClInclude Include="MovementComponent.h" />
+    <ClInclude Include="Online.h" />
+    <ClInclude Include="OnlineHost.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RangedWeapon.h" />
     <ClInclude Include="DialogBase.h" />
